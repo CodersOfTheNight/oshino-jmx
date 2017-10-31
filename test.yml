@@ -1,0 +1,10 @@
+agents:
+- module: oshino_jmx.agent.JmxAgent
+  name: jmx-agent
+  tag: jmx
+interval: 10
+loglevel: DEBUG
+riemann:
+  host: localhost
+  port: 5555
+  transport: BlankTransport

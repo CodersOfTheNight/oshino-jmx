@@ -1,0 +1,15 @@
+servers: 
+  - port: 8004
+    host: localhost
+    queries:
+      - outputWriters:
+          - "@class": com.googlecode.jmxtrans.model.output.StatsDWriter
+            port: 8125
+            host: localhost
+        obj: java.lang:type=OperatingSystem
+        attr: 
+          - SystemLoadAverage
+          - FreePhysicalMemorySize
+          - FreeSwapSpaceSize
+          - OpenFileDescriptorCount
+    numQueryThreads" : 2
