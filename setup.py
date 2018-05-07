@@ -3,8 +3,6 @@
 import os
 import shutil
 from setuptools import setup
-from pip.req import parse_requirements
-from pip.exceptions import InstallationError
 from setuptools.command.install import install
 
 from oshino_jmx.version import get_version
@@ -33,7 +31,7 @@ setup(name="oshino_jmx",
       author="Šarūnas Navickas",
       author_email="zaibacu@gmail.com",
       packages=["oshino_jmx"],
-      install_requires=[str(ir.req) for ir in install_reqs],
+      install_requires=["oshino", "oshino_statsd"],
       test_suite="pytest",
       tests_require=["pytest", "pytest-cov"],
       setup_requires=["pytest-runner"],
