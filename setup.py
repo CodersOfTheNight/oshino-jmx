@@ -19,11 +19,6 @@ class PostInstallCommand(install):
             shutil.copy("scripts/etc/jmxconfig.yml", "etc/jmxconfig.yml")
         install.run(self)
 
-try:
-    install_reqs = list(parse_requirements("requirements.txt", session={}))
-except InstallationError:
-    # There are no requirements
-    install_reqs = []
 
 setup(name="oshino_jmx",
       version=get_version(),
