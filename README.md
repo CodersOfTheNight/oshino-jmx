@@ -7,4 +7,4 @@ For more info, refer to parent project [Oshino](https://github.com/CodersOfTheNi
 Setup
 =====
 It basically downloads [JMXTrans](https://github.com/jmxtrans/jmxtrans) agent and launches it. All regular configuration is done via `etc/jmxconfig.yml`.
-In parralel, [oshino_statsd](https://github.com/CodersOfTheNight/oshino-statsd) is launched to collect StatsD Metrics pushed by JMXTrans.
+In parallel, [oshino_statsd](https://github.com/CodersOfTheNight/oshino-statsd) is launched to collect StatsD Metrics pushed by JMXTrans.
